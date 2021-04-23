@@ -250,10 +250,10 @@ Match User {{ name }}
 AuthenticationMethods {{ auth_methods|join(',') }}
 {%- endif %}
 {%- endfor %}
+{%- endif %}
 
 {%- if server.get('gateway_ports', False) %}
 GatewayPorts yes
 {%- else %}
 GatewayPorts no
-{%- endif %}
 {%- endif %}
